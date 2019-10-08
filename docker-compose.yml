@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  wpe:
+    restart: always
+    build: ./wpe
+    privileged: true
+    ports:
+      - 8080:8080
+  apache:
+    restart: always
+    build: ./apache
+    privileged: true
+    ports:
+      - 80:80
